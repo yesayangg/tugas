@@ -1,0 +1,43 @@
+public class tugaspbo {
+    class Hewan {
+    void suara() {
+        System.out.println("Hewan bersuara...");
+    }
+}
+
+class Kucing extends Hewan {
+    @Override
+    void suara() {
+        System.out.println("Meong... Meong...");
+    }
+}
+
+class Anjing extends Hewan {
+    @Override
+    void suara() {
+        System.out.println("Guk... Guk...");
+    }
+}
+
+class Burung extends Hewan {
+    @Override
+    void suara() {
+        System.out.println("Cuit... Cuit...");
+    }
+}
+
+public class HewanMain {
+    public static void main(String[] args) {
+        Hewan hewan1 = new Kucing();
+        Hewan hewan2 = new Anjing();
+        Hewan hewan3 = new Burung();
+
+        // Memanggil metode suara() dengan polimorfisme
+        hewan1.suara(); // Output: Meong... Meong...
+        hewan2.suara(); // Output: Guk... Guk...
+        hewan3.suara(); // Output: Cuit... Cuit...
+    }
+}
+
+    
+}
